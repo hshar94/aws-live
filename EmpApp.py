@@ -117,7 +117,7 @@ def FetchData():
     emp_id = request.form['emp_id']
 
     output = {}
-    select_sql = "SELECT emp_id, first_name, last_name, pri_skill, location from employee2 where emp_id=%s"
+    select_sql = "SELECT emp_id, first_name, last_name, pri_skill, location from employee where emp_id=%s"
     cursor = db_conn.cursor()
 
     try:
