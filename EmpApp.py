@@ -25,7 +25,7 @@ db_conn = connections.Connection(
     
 )
 output = {}
-
+table = 'employee';
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -51,7 +51,7 @@ def AddEmp():
 
     try:
         
-        cursor.execute(insert_sql,(db, emp_id, first_name, last_name, pri_skill, location))
+        cursor.execute(insert_sql,(table, emp_id, first_name, last_name, pri_skill, location))
         db_conn.commit()
         emp_name = "" + first_name + " " + last_name
         # Uplaod image file in S3 #
