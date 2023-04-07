@@ -11,3 +11,15 @@ sudo apt-get install python3-boto3
 
 # for running application
 sudo python3 Empapp.py
+
+
+
+
+
+If you want to run the entire project on Docker the follow the below steps;
+
+sudo apt-get install docker.io
+sudo docker build -t --name .
+sudo docker run -itd -p 8000:80 --name
+
+but one thing, you should allow port 8000 in your securty group of EC2
